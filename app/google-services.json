@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777408834995",
+    "project_id": "xoxo-b603c",
+    "storage_bucket": "xoxo-b603c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777408834995:android:323141822040541551afc6",
+        "android_client_info": {
+          "package_name": "dev.haguel.xo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777408834995-8e2u2f1fg3pjvjt5ukb3gc9dhsl0o51o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2mPDkkn389WQ1PU25i7mPNhsTP80Wfzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777408834995-8e2u2f1fg3pjvjt5ukb3gc9dhsl0o51o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
