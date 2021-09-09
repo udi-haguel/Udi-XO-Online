@@ -43,14 +43,6 @@ import dev.haguel.xo.utils.LoaderDialog;
 
 public class MainActivity extends AppCompatActivity {
 
-    // 1) UI THREAD / MAIN THREAD == (UI CHANGES)
-    // -/-^-/-/-/-----------------
-    //
-
-    // 2) Thread == The Rest
-    // -------
-    // -------
-
     public enum eDBListenerType {
         RoomsList,
         CurrentRoom,
@@ -80,47 +72,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /*
-        ImageView imageView3 = findViewById(R.id.imageView3);
-        RotateAnimation rotate  = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-        rotate.setRepeatCount(Animation.INFINITE);
-        rotate.setDuration(1000);
-        imageView3.startAnimation(rotate);
-
-
-        ArrayList<TextView> tvs = new ArrayList<>();
-        LinearLayout layout = findViewById(R.id.l1);
-
-
-        Thread run = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                for (TextView tv : tvs) {
-                    layout.post(() -> {
-                        layout.addView(tv);
-                    });
-                }
-            }
-        });
-
-       Thread threead = new Thread(new Runnable() {
-           @Override
-           public void run() {
-
-               for(int i=0; i<10_000; i++) {
-                   TextView tv = new TextView(MainActivity.this);
-                   tv.setText("hello");
-                   tvs.add(tv);
-               }
-               run.start();
-           }
-       });
-       threead.start();
-
-         */
-
-
 
 
 
@@ -240,11 +191,3 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 }
-
-/*
-1) Handle On Back Press
-2) Add Yoyo Animation
-3) Add FadeAnimation Between Fragments
-4) Console, Upload App "UDI XOXO"
-5) Async Task
- */
