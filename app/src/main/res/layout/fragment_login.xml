@@ -20,7 +20,8 @@
 
         <TextView
             android:id="@+id/tvLoginBanner"
-            style="@style/turquoise_40sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/title"
             android:text="Login\nto your account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-8dp"
             android:src="@drawable/title_line"
+            android:contentDescription="@string/title_underline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLoginBanner" />
@@ -49,6 +51,7 @@
         <EditText
             android:id="@+id/etLoginEmail"
             style="@style/auth_edit_text"
+            android:textSize="@dimen/medium_text"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +61,7 @@
         <EditText
             android:id="@+id/etLoginPassword"
             style="@style/auth_edit_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:hint="Password"
             android:inputType="textPassword"
@@ -79,7 +83,8 @@
 
         <TextView
             android:id="@+id/tvLogin"
-            style="@style/green_30sp_text"
+            style="@style/green_text"
+            android:textSize="@dimen/primary_text"
             android:text="Login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +92,8 @@
 
         <TextView
             android:id="@+id/tvForgotPassword"
-            style="@style/turquoise_20sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:text="@string/forgot_password"
             app:layout_constraintEnd_toStartOf="@+id/loginMiddleGuideLine"
@@ -96,7 +102,8 @@
 
         <TextView
             android:id="@+id/tvRegisterBtn"
-            style="@style/turquoise_20sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:text="@string/register"
             app:layout_constraintEnd_toEndOf="parent"

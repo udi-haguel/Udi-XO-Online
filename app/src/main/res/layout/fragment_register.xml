@@ -20,7 +20,8 @@
 
         <TextView
             android:id="@+id/tvRegisterBanner"
-            style="@style/turquoise_40sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/title"
             android:text="Create new account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-8dp"
             android:src="@drawable/title_line"
+            android:contentDescription="@string/title_underline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvRegisterBanner" />
@@ -40,7 +42,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clRegisterMiddle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/registerGuideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +52,7 @@
         <EditText
             android:id="@+id/etRegisterName"
             style="@style/auth_edit_text"
+            android:textSize="@dimen/medium_text"
             android:hint="Full Name"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +62,7 @@
         <EditText
             android:id="@+id/etRegisterEmail"
             style="@style/auth_edit_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
@@ -69,6 +73,7 @@
         <EditText
             android:id="@+id/etRegisterPassword"
             style="@style/auth_edit_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:hint="Password"
             android:inputType="textPassword"
@@ -79,6 +84,7 @@
         <EditText
             android:id="@+id/etRegisterPassword2"
             style="@style/auth_edit_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:hint="Verify Password"
             android:inputType="textPassword"
@@ -100,7 +106,8 @@
 
         <TextView
             android:id="@+id/tvRegister"
-            style="@style/green_30sp_text"
+            style="@style/green_text"
+            android:textSize="@dimen/primary_text"
             android:text="Register"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +115,8 @@
 
         <TextView
             android:id="@+id/tvAlreadyMember"
-            style="@style/turquoise_20sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/medium_text"
             android:layout_marginTop="8dp"
             android:text="Already have an account"
             app:layout_constraintEnd_toEndOf="parent"

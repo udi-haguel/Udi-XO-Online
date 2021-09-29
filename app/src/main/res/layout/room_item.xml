@@ -15,7 +15,8 @@
 
         <TextView
             android:id="@+id/tvRoomName"
-            style="@style/turquoise_30sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/secondary_text"
             android:layout_marginStart="16dp"
             android:padding="8dp"
             android:text="Luffy"
@@ -25,12 +26,12 @@
 
         <TextView
             android:id="@+id/tvRoomDetails"
-            style="@style/base_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/small_text"
             android:layout_marginEnd="16dp"
             android:padding="8dp"
             android:text="Join room"
             android:textColor="@color/turquoise"
-            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

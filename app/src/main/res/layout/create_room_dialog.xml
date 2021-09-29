@@ -2,15 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/create_room_dialog_background"
     android:layout_centerInParent="true">
 
     <TextView
         android:id="@+id/tvCreateRoomDialogTitle"
-        style="@style/green_30sp_text"
+        style="@style/green_text"
+        android:textSize="@dimen/primary_text"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/enter_room_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +23,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/tvCreateRoom"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,26 +39,29 @@
             android:backgroundTint="@color/green"
             android:fontFamily="@font/crayons_regular"
             android:hint="@string/room_name"
-            android:textColorHint="@color/dialog_hint"
             android:maxLength="8"
             android:maxLines="1"
-            android:textSize="25sp" />
+            android:textColorHint="@color/dialog_hint"
+            android:textSize="@dimen/secondary_text" />
 
         <TextView
             android:id="@+id/tvHash"
-            style="@style/green_25sp_text"
+            style="@style/green_text"
+            android:textSize="@dimen/secondary_text"
             android:text="#" />
 
         <TextView
             android:id="@+id/tvRndNumber"
-            style="@style/green_25sp_text"
+            style="@style/green_text"
+            android:textSize="@dimen/secondary_text"
             android:text="5624" />
     </LinearLayout>
 
 
     <TextView
         android:id="@+id/tvCreateRoom"
-        style="@style/green_25sp_text"
+        style="@style/green_text"
+        android:textSize="@dimen/secondary_text"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="@string/create_room"
@@ -62,7 +70,8 @@
 
     <TextView
         android:id="@+id/tvCancel"
-        style="@style/green_25sp_text"
+        style="@style/green_text"
+        android:textSize="@dimen/secondary_text"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
         android:text="Cancel"

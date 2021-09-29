@@ -13,27 +13,30 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/tvMenuTitle"
             style="@style/base_text"
             android:gravity="center_horizontal"
             android:text="@string/tic_tac_toe_caps"
             android:textColor="@color/turquoise"
-            android:textSize="50sp"
+            android:textSize="@dimen/title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/ivMenuLine"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="-16dp"
             android:src="@drawable/title_line"
+            android:contentDescription="@string/title_underline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvMenuTitle"
@@ -51,10 +54,13 @@
 
         <TextView
             android:id="@+id/tvMiddleMenu"
-            style="@style/turquoise_40sp_text"
+            style="@style/turquoise_text"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_horizontal"
             android:text="Please Choose\nLocal or Online Game"
             android:textColor="@color/turquoise"
+            android:textSize="@dimen/title"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +73,7 @@
         android:id="@+id/layoutBottomMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="32dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,18 +82,20 @@
 
         <TextView
             android:id="@+id/tvLocalGame"
-            style="@style/green_30sp_text"
+            style="@style/green_text"
             android:padding="16dp"
             android:text="@string/local_game"
+            android:textSize="@dimen/primary_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvOnlineGame"
-            style="@style/green_30sp_text"
+            style="@style/green_text"
             android:padding="16dp"
             android:text="@string/online_game"
+            android:textSize="@dimen/primary_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLocalGame" />
@@ -96,7 +104,8 @@
 
     <TextView
         android:id="@+id/tvLogOut"
-        style="@style/turquoise_20sp_text"
+        style="@style/turquoise_text"
+        android:textSize="@dimen/medium_text"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="Log out"
