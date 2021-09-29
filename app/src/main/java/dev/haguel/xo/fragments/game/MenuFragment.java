@@ -43,6 +43,8 @@ public class MenuFragment extends BaseGameFragment {
     private TextView tvOnlineGame;
     private TextView tvLogOut;
 
+    Animation fadeIn, fadeOut;
+
 
     public MenuFragment() {
         // Required empty public constructor
@@ -76,6 +78,8 @@ public class MenuFragment extends BaseGameFragment {
         super.onViewCreated(view, savedInstanceState);
 
         setAnimations();
+        fadeIn = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_animation);
+        fadeOut = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_out_animation);
 
 
         tvLocalGame.setOnClickListener(v -> {
@@ -83,6 +87,7 @@ public class MenuFragment extends BaseGameFragment {
                     .withListener(new YoYoCallback() {
                         @Override
                         public void onAnimationEnd(Animator animation) {
+                            tvLogOut.startAnimation(fadeOut);
                             startAnimations(topOutAnim, middleOutAnim, bottomOutAnim);
                             Utils.changeFragment(R.id.game_fragment_container, getParentFragmentManager().beginTransaction(),
                                     GameFragment.newInstance("", "",  "", false), GAME_FRAGMENT_TAG, true);
@@ -140,7 +145,6 @@ public class MenuFragment extends BaseGameFragment {
                     if (task.getResult().getValue(String.class) == null) return;
 
                     String playerName = task.getResult().getValue(String.class);
-                    //Utils.changeFragment(R.id.game_fragment_container, getParentFragmentManager().beginTransaction(), OnlineRoomsFragment.newInstance(playerName), ONLINE_ROOMS_FRAGMENT_TAG);
 
                     Fragment frag = getParentFragmentManager().findFragmentById(R.id.game_fragment_container);
                     if ((frag == null || frag instanceof MenuFragment)) {
@@ -159,7 +163,7 @@ public class MenuFragment extends BaseGameFragment {
     @Override
     public void onResume() {
         super.onResume();
-        tvLogOut.startAnimation(topInAnim);
+        tvLogOut.startAnimation(fadeIn);
         startAnimations(topInAnim, middleInAnim, bottomInAnim);
     }
 }

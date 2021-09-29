@@ -20,7 +20,8 @@
 
         <TextView
             android:id="@+id/tvMenuTitle"
-            style="@style/turquoise_40sp_text"
+            style="@style/turquoise_text"
+            android:textSize="@dimen/title"
             android:gravity="center_horizontal"
             android:text="Waiting for player2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-8dp"
             android:src="@drawable/title_line"
+            android:contentDescription="@string/title_underline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvMenuTitle"
@@ -118,7 +120,8 @@
 
         <TextView
             android:id="@+id/tvStopWaiting"
-            style="@style/green_30sp_text"
+            style="@style/green_text"
+            android:textSize="@dimen/primary_text"
             android:gravity="center_horizontal"
             android:text="@string/exit_to_menu"
             app:layout_constraintBottom_toBottomOf="parent"
