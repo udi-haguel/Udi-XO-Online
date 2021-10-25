@@ -82,7 +82,7 @@
 
         <TextView
             android:id="@+id/tvLocalGame"
-            style="@style/green_text"
+            style="@style/turquoise_text"
             android:padding="16dp"
             android:text="@string/local_game"
             android:textSize="@dimen/primary_text"
@@ -92,7 +92,7 @@
 
         <TextView
             android:id="@+id/tvOnlineGame"
-            style="@style/green_text"
+            style="@style/turquoise_text"
             android:padding="16dp"
             android:text="@string/online_game"
             android:textSize="@dimen/primary_text"

@@ -24,7 +24,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import dev.haguel.xo.R;
 import dev.haguel.xo.activity.MainActivity;
@@ -104,7 +104,7 @@ public class GameFragment extends BaseGameFragment implements EventClickListener
     }
 
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         if (getActivity() == null) return;
@@ -341,7 +341,7 @@ public class GameFragment extends BaseGameFragment implements EventClickListener
     private void onlineGameEventListener(){
         gameDataEventListener = new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (!isVisible() || snapshot.getValue(GameDataForFirebase.class) == null) return;
                 dataForFirebase = snapshot.getValue(GameDataForFirebase.class);
                 updateDataFromFirebase(dataForFirebase);
@@ -360,7 +360,7 @@ public class GameFragment extends BaseGameFragment implements EventClickListener
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error) {
 
             }
         };
@@ -370,7 +370,7 @@ public class GameFragment extends BaseGameFragment implements EventClickListener
     private void roomEventListener() {
         roomEvent = new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.getValue() == null) {
                     //TODO: other player disconnected, new "you won" activity
                     startAnimations(topOutAnim, middleOutAnim, bottomOutAnim);
@@ -380,7 +380,7 @@ public class GameFragment extends BaseGameFragment implements EventClickListener
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getContext(), "error", Toast.LENGTH_SHORT).show();
             }
         };

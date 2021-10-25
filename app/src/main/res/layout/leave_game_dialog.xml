@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textView5"
-        style="@style/green_text"
+        style="@style/turquoise_text"
         android:textSize="@dimen/primary_text"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -22,7 +22,7 @@
 
     <TextView
         android:id="@+id/btnCancelLeavingDialog"
-        style="@style/green_text"
+        style="@style/turquoise_text"
         android:textSize="@dimen/secondary_text"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/btnLeaveGameLeavingDialog"
-        style="@style/green_text"
+        style="@style/turquoise_text"
         android:textSize="@dimen/secondary_text"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"

@@ -16,7 +16,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
-import org.jetbrains.annotations.NotNull;
 
 import dev.haguel.xo.R;
 import dev.haguel.xo.activity.MainActivity;
@@ -52,9 +51,8 @@ public class WaitingForPlayerFragment extends BaseGameFragment {
 
 
     @Nullable
-    @org.jetbrains.annotations.Nullable
     @Override
-    public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable  ViewGroup container, @Nullable  Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_waiting_for_player, container, false);
 
         exit = view.findViewById(R.id.tvStopWaiting);
@@ -68,7 +66,7 @@ public class WaitingForPlayerFragment extends BaseGameFragment {
 
 
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         if (getActivity() == null) return;
@@ -107,7 +105,7 @@ public class WaitingForPlayerFragment extends BaseGameFragment {
     private void addCurrentRoomEventListener(){
         currentRoomValueEventListener = new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 // check if room has 3 children (player1, player2, roomName)
                 if (snapshot.getChildrenCount() == 3){
@@ -120,7 +118,7 @@ public class WaitingForPlayerFragment extends BaseGameFragment {
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error) {
             }
         };
         ((MainActivity)getActivity()).registerDbEvents(MainActivity.eDBListenerType.CurrentRoom, currentRoomValueEventListener, roomName);
