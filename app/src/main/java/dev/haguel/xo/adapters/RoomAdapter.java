@@ -8,8 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
 
 import dev.haguel.xo.R;
@@ -34,16 +32,15 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
     }
 
     @NonNull
-    @NotNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View v = inflater.inflate(R.layout.room_item, parent, false);
         return new ViewHolder(v, mListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull RoomAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RoomAdapter.ViewHolder holder, int position) {
         Room room = roomList.get(position);
 
         holder.tvRoomName.setText(room.roomName.replace("@", "#"));
@@ -67,7 +64,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
         TextView tvRoomName;
         TextView tvRoomDetails;
 
-        public ViewHolder(@NonNull @NotNull View itemView, OnRoomClickListener listener) {
+        public ViewHolder(@NonNull View itemView, OnRoomClickListener listener) {
             super(itemView);
             tvRoomName = itemView.findViewById(R.id.tvRoomName);
             tvRoomDetails = itemView.findViewById(R.id.tvRoomDetails);

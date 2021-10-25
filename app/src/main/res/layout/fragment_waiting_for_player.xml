@@ -120,7 +120,7 @@
 
         <TextView
             android:id="@+id/tvStopWaiting"
-            style="@style/green_text"
+            style="@style/turquoise_text"
             android:textSize="@dimen/primary_text"
             android:gravity="center_horizontal"
             android:text="@string/exit_to_menu"

@@ -16,8 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Random;
 
 import dev.haguel.xo.R;
@@ -33,9 +31,8 @@ public class CreateRoomDialog extends AppCompatDialogFragment {
 
 
     @NonNull
-    @NotNull
     @Override
-    public Dialog onCreateDialog(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public Dialog onCreateDialog(@Nullable  Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -54,7 +51,7 @@ public class CreateRoomDialog extends AppCompatDialogFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
 

@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-import org.jetbrains.annotations.NotNull;
 
 import dev.haguel.xo.R;
 import dev.haguel.xo.utils.EventClickListener;
@@ -60,7 +59,7 @@ public class BoardFragment extends Fragment {
 
 
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         tiles = new ImageView[9];

@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
-import org.jetbrains.annotations.NotNull;
 
 import dev.haguel.xo.R;
 import dev.haguel.xo.activity.MainActivity;
@@ -59,7 +58,7 @@ public class MenuFragment extends BaseGameFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable  Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         setAnimations();

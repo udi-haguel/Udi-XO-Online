@@ -19,13 +19,9 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import dev.haguel.xo.R;
 import dev.haguel.xo.activity.MainActivity;
 import dev.haguel.xo.adapters.RoomAdapter;
@@ -59,7 +55,7 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
     }
 
     @Override
-    public void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
@@ -79,7 +75,7 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
     }
 
     @Override
-    public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         setAnimations();
@@ -130,7 +126,7 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
     private void addRoomsEventListener(){
         roomsValueEventListener = new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (getActivity() == null || !isVisible()) return;
 
                 // show list of rooms
@@ -171,7 +167,7 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error) {
                 toggleDialog(false);
             }
         };

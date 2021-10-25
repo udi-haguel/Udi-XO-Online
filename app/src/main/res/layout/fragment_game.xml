@@ -52,7 +52,7 @@
 
             <TextView
                 android:id="@+id/tvXscore"
-                style="@style/green_text"
+                style="@style/turquoise_text"
                 android:layout_marginStart="16dp"
                 android:textSize="@dimen/title"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
 
             <TextView
                 android:id="@+id/tvColon"
-                style="@style/green_text"
+                style="@style/turquoise_text"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:text=":"
@@ -75,7 +75,7 @@
 
             <TextView
                 android:id="@+id/tvOscore"
-                style="@style/green_text"
+                style="@style/turquoise_text"
                 android:layout_marginEnd="16dp"
                 android:textSize="@dimen/title"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -179,7 +179,7 @@
 
         <TextView
             android:id="@+id/tvNewGame"
-            style="@style/green_text"
+            style="@style/turquoise_text"
             android:textSize="@dimen/primary_text"
             android:text="@string/new_game"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,7 +188,7 @@
 
         <TextView
             android:id="@+id/tvResetGame"
-            style="@style/green_text"
+            style="@style/turquoise_text"
             android:textSize="@dimen/primary_text"
             android:text="@string/reset_game"
             android:layout_marginTop="8dp"
@@ -201,7 +201,7 @@
 
         <TextView
             android:id="@+id/tvExitToMenu"
-            style="@style/green_text"
+            style="@style/turquoise_text"
             android:textSize="@dimen/primary_text"
             android:text="@string/exit_to_menu"
             app:layout_constraintBottom_toBottomOf="parent"
