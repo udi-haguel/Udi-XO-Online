@@ -1,4 +1,4 @@
-package dev.haguel.xo.fragments.game;
+package dev.haguel.xo.fragments;
 
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
