@@ -21,7 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AuthenticationActivity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
