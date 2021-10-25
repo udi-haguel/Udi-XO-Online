@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tvCreateRoomDialogTitle"
-        style="@style/turquoise_text"
+        style="@style/green_text"
         android:textSize="@dimen/primary_text"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -46,13 +46,13 @@
 
         <TextView
             android:id="@+id/tvHash"
-            style="@style/turquoise_text"
+            style="@style/green_text"
             android:textSize="@dimen/secondary_text"
             android:text="#" />
 
         <TextView
             android:id="@+id/tvRndNumber"
-            style="@style/turquoise_text"
+            style="@style/green_text"
             android:textSize="@dimen/secondary_text"
             android:text="5624" />
     </LinearLayout>
@@ -60,7 +60,7 @@
 
     <TextView
         android:id="@+id/tvCreateRoom"
-        style="@style/turquoise_text"
+        style="@style/green_text"
         android:textSize="@dimen/secondary_text"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
@@ -70,7 +70,7 @@
 
     <TextView
         android:id="@+id/tvCancel"
-        style="@style/turquoise_text"
+        style="@style/green_text"
         android:textSize="@dimen/secondary_text"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
