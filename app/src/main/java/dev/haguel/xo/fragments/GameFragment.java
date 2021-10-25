@@ -1,4 +1,4 @@
-package dev.haguel.xo.fragments.game;
+package dev.haguel.xo.fragments;
 
 import android.animation.Animator;
 import android.content.Intent;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -14,10 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
