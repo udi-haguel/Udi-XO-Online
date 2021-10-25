@@ -24,7 +24,6 @@ import org.jetbrains.annotations.NotNull;
 
 import dev.haguel.xo.R;
 import dev.haguel.xo.activity.MainActivity;
-import dev.haguel.xo.fragments.auth.RegisterFragment;
 import dev.haguel.xo.utils.Utils;
 import dev.haguel.xo.utils.YoYoCallback;
 

@@ -53,12 +53,9 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
         // Required empty public constructor
     }
 
-    public static OnlineRoomsFragment newInstance(String playerName) {
-        OnlineRoomsFragment fragment = new OnlineRoomsFragment();
-        Bundle args = new Bundle();
-        args.putString("playerName", playerName);
-        fragment.setArguments(args);
-        return fragment;
+    public static OnlineRoomsFragment newInstance() {
+        return new OnlineRoomsFragment();
+
     }
 
     @Override
@@ -84,11 +81,6 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
     @Override
     public void onViewCreated(@NonNull @NotNull View view, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        if (getActivity() == null) return;
-        Bundle bundle = getArguments();
-        if (bundle == null || !bundle.containsKey("playerName")) return;
-        playerName = bundle.getString("playerName");
 
         setAnimations();
 
@@ -136,7 +128,6 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
     }
 
     private void addRoomsEventListener(){
-        //roomsListRef = dbRef.child("Rooms");
         roomsValueEventListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
@@ -160,6 +151,7 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
                         Room currentRoom = roomsList.get(position);
                         roomName = currentRoom.getRoomName();
                         role = "O";
+                        playerName = "guest";
 
                         HashMap<String, String> player2 = new HashMap<>();
                         player2.put("roomName", currentRoom.getRoomName());
@@ -197,6 +189,7 @@ public class OnlineRoomsFragment extends BaseGameFragment implements CreateRoomD
         tvCreateRoom.setText(R.string.room_was_created);
         tvCreateRoom.setEnabled(false);
         role = "X";
+        playerName = "host";
         HashMap<String, String> player1 = new HashMap<>();
         player1.put("player1", playerName);
         player1.put("roomName", roomName);

@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
         Game,
     }
 
-    // FIREBASE USER
-    private FirebaseUser user;
-    private String userID;
     // loader
     private LoaderDialog loaderDialog;
     // ads
@@ -73,14 +70,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            startActivity(new Intent(this, AuthenticationActivity.class));
-        } else {
-            user = FirebaseAuth.getInstance().getCurrentUser();
-            userID = user.getUid();
-        }
         dbRef = FirebaseDatabase.getInstance().getReference();
 
 
@@ -179,10 +168,9 @@ public class MainActivity extends AppCompatActivity {
 
             } else if (frag instanceof WaitingForPlayerFragment){
 
-                String playerName = ((WaitingForPlayerFragment) frag).getPlayerName();
                 String roomName = ((WaitingForPlayerFragment) frag).getRoomName();
                 deleteRoomFromDB(roomName);
-                fragmentTransaction.replace(R.id.game_fragment_container, OnlineRoomsFragment.newInstance(playerName));
+                fragmentTransaction.replace(R.id.game_fragment_container, OnlineRoomsFragment.newInstance());
                 fragmentTransaction.commit();
 
             }
